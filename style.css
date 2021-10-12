@@ -150,7 +150,7 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(184, 33, 33);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -263,6 +263,10 @@ a:hover {
     color: rgba(0, 0, 0, .7);
     border-color: rgba(0, 0, 0, .3);
 }
+a {
+    display: inline-block;
+    text-decoration: none;
+}
 
 .voffset {
     margin-top: 30px;
@@ -311,13 +315,17 @@ a:hover {
     min-width: 100px;
 }
 
+.navbar-brand:focus {
+    display: inline-block;
+    border: 1px solid #333333;
+    border-radius: 15px;
+}
+
 .nav-center .navbar-brand img {
     margin: 0;
 }
 
 .navbar .nav {
-    padding-top: 2px;
-    margin-right: -16px;
     float: right;
     z-index: 1;
 }
@@ -332,9 +340,21 @@ a:hover {
     text-align: inherit;
 }
 
-.nav > li a:hover,
+.nav > li a {
+    border-radius: 15px;
+}
+
 .nav > li a:focus {
     background: transparent;
+    border: 1px solid #333333;
+}
+
+a:focus {
+    border: 1px solid #333333;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .navbar-toggle {
@@ -366,7 +386,7 @@ a:hover {
     .site-navigation {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 200px;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
@@ -536,7 +556,8 @@ a[data-lightbox] {
     text-align: center;
 }
 
-a[data-lightbox]:hover::before {
+a[data-lightbox]:hover::before,
+a[data-lightbox]:focus::before {
     content: "+";
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
     font-size: 32px;
@@ -554,7 +575,8 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
-a[data-lightbox]:hover img {
+a[data-lightbox]:hover img,
+a[data-lightbox]:focus img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
@@ -601,6 +623,7 @@ a[data-lightbox]:hover img {
 }
 
 .close-lightbox:hover,
+.close-lightbox:focus,
 .next-lightbox:hover,
 .prev-lightbox:hover {
     opacity: 1.0;
@@ -652,6 +675,17 @@ a {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
+}
+
+.citation {
+    font-size: 1.4em;
+    padding: 0 200px;
+    margin: 0;
+    font-style: italic;
+}
+
+p.citation__auteur {
+    font-size: 1em;
 }
 
 .container {
@@ -709,6 +743,15 @@ h2 {
     line-height: 1.4em;
 }
 
+.sous-titre {
+    padding: 0 135px;
+}
+
+.sous-titre2 {
+    padding: 0 240px;
+    margin-bottom: 25px;
+}
+
 h3 {
     font-size: 15px;
     text-transform: uppercase;
@@ -736,7 +779,8 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: #333333!important;
+    margin-bottom: 20px;
 }
 
 .portfolio-thumb {
@@ -775,7 +819,7 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #333333!important;
 }
 
 .btn-atomic-tangerine {
@@ -783,7 +827,8 @@ h4 {
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
+.btn-atomic-tangerine:hover,
+.btn-atomic-tangerine:focus {
     background: #c27956!important;
     color: #FFFFFF!important;
 }
