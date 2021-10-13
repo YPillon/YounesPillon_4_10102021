@@ -387,7 +387,7 @@ ul {
     .site-navigation {
         position: absolute;
         top: 50%;
-        right: 200px;
+        right: 20px;
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
@@ -827,7 +827,7 @@ h4 {
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #333333!important;
 }
 
 .btn-atomic-tangerine:hover,
